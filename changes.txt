@@ -1,0 +1,239 @@
+===============================
+        changes.md
+===============================
+
+BANK MANAGEMENT SYSTEM
+CHANGES AND IMPROVEMENTS REPORT
+
+--------------------------------
+1. NEW FEATURES ADDED
+--------------------------------
+
+1.1 Display All Accounts
+------------------------
+Feature Added:
+- Displays all customer accounts stored in the file.
+
+Function:
+- displayAll(FILE *fPtr)
+
+Purpose:
+- View all account details
+- Helps admin monitor records
+
+--------------------------------
+
+1.2 Search Account
+------------------
+Feature Added:
+- Search account using account number.
+
+Function:
+- searchAccount(FILE *fPtr)
+
+Purpose:
+- Quickly find customer details
+- Easy account verification
+
+--------------------------------
+
+1.3 Deposit Money
+-----------------
+Feature Added:
+- Separate deposit functionality.
+
+Function:
+- depositMoney(FILE *fPtr)
+
+Improvements:
+- Accepts only positive values
+- Updates balance securely
+
+--------------------------------
+
+1.4 Withdraw Money
+------------------
+Feature Added:
+- Separate withdrawal functionality.
+
+Function:
+- withdrawMoney(FILE *fPtr)
+
+Improvements:
+- Prevents insufficient balance withdrawal
+- Protects from negative balance
+
+--------------------------------
+
+1.5 Transaction Logging
+-----------------------
+Feature Added:
+- Stores transaction activity in file.
+
+Function:
+- logTransaction(const char *message)
+
+Generated File:
+- transactions.txt
+
+Stores:
+- Account creation
+- Deposits
+- Withdrawals
+- Updates
+- Deletions
+
+--------------------------------
+2. FILE HANDLING IMPROVEMENTS
+--------------------------------
+
+2.1 Auto File Creation
+----------------------
+Old Problem:
+- Program crashed if credit.dat did not exist.
+
+Solution:
+- Automatically creates credit.dat file.
+
+Benefits:
+- Better reliability
+- Easy first-time execution
+
+--------------------------------
+3. VALIDATION IMPROVEMENTS
+--------------------------------
+
+3.1 Account Number Validation
+-----------------------------
+Added validation:
+- Accepts only account numbers between 1 and 100.
+
+Purpose:
+- Prevents invalid memory/file access
+
+--------------------------------
+
+3.2 Amount Validation
+---------------------
+Added validation:
+- Deposit and withdrawal amount must be greater than zero.
+
+Purpose:
+- Prevents invalid transactions
+
+--------------------------------
+
+3.3 Balance Protection
+----------------------
+Added validation:
+- Withdrawal blocked if balance is insufficient.
+
+Purpose:
+- Prevents overdraft
+
+--------------------------------
+4. USER INTERFACE IMPROVEMENTS
+--------------------------------
+
+4.1 Improved Menu Design
+------------------------
+Old Menu:
+- Basic menu interface
+
+New Menu:
+- Professional formatted menu system
+
+Benefits:
+- Easy navigation
+- Better readability
+
+--------------------------------
+5. NEW MENU OPTIONS
+--------------------------------
+
+1 - Export accounts to text file
+2 - Update account
+3 - Add new account
+4 - Delete account
+5 - Display all accounts
+6 - Search account
+7 - Deposit money
+8 - Withdraw money
+9 - Exit program
+
+--------------------------------
+6. NEW FILES GENERATED
+--------------------------------
+
+1. credit.dat
+   - Binary account database
+
+2. accounts.txt
+   - Formatted account report
+
+3. transactions.txt
+   - Transaction history log
+
+--------------------------------
+7. INTERNAL CODE IMPROVEMENTS
+--------------------------------
+
+New Function Prototypes Added:
+
+- displayAll(FILE *fPtr)
+- searchAccount(FILE *fPtr)
+- depositMoney(FILE *fPtr)
+- withdrawMoney(FILE *fPtr)
+- logTransaction(const char *message)
+
+--------------------------------
+8. SECURITY IMPROVEMENTS
+--------------------------------
+
+Added:
+- Invalid amount checking
+- Balance protection
+- Account existence verification
+
+--------------------------------
+9. FUTURE ENHANCEMENTS
+--------------------------------
+
+Possible future upgrades:
+- Password protection
+- Admin login
+- Money transfer
+- Interest calculation
+- ATM simulation
+- GUI interface
+- Database integration
+- Encryption support
+
+--------------------------------
+10. COMPILE AND RUN COMMANDS
+--------------------------------
+
+Linux / Mac:
+gcc bank.c -o bank
+./bank
+
+Windows:
+gcc bank.c -o bank.exe
+bank.exe
+
+--------------------------------
+11. CONCLUSION
+--------------------------------
+
+The enhanced Bank Management System now includes:
+- Better account management
+- Safer transactions
+- Improved file handling
+- Transaction history logging
+- Stronger validation
+- User-friendly interface
+
+This upgraded version is more professional,
+secure, and suitable for academic mini projects.
+
+===============================
